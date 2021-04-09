@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',  # The core site - the meta of the Python Tracks site
 ]
 
 MIDDLEWARE = [
@@ -75,12 +76,12 @@ WSGI_APPLICATION = 'pytrackssite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pytrackssite',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql',  # Postgresql setup
+        'NAME': 'pytrackssite',                     # The database name
+        'USER': 'admin',                            # The database username this app uses
+        'PASSWORD': 'admin',                        # The database password for 'USER'
+        'HOST': 'localhost',                        # The hostname where the database server resides
+        'PORT': '5432',                             # The port used by the database server or instance
     }
 }
 
