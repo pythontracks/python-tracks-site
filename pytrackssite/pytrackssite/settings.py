@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',  # The core site - the meta of the Python Tracks site
+    'articles', # The articles app - handles article posts
 ]
 
 MIDDLEWARE = [
