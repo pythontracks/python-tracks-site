@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),  # Includes the Core app urls.
     path('articles/', include('articles.urls')),
+    path('tracks/', include('tracks.urls')),
 ]
