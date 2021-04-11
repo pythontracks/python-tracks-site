@@ -21,6 +21,16 @@ sudo su - postgres -c "dropdb $DBNAME"
 # Recreate database.
 sudo su - postgres -c "createdb $DBNAME -O $DBUSER"
 
+# Clear migrations
+rm -rf core/migrations
+rm -rf articles/migrations
+rm -rf tracks/migrations
+
+# Make migrations
+python manage.py makemigrations core
+python manage.py makemigrations articles
+python manage.py makemigrations tracks
+
 # Run Django migrate script.
 python manage.py migrate
 

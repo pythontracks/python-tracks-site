@@ -1,5 +1,6 @@
-from django.contrib.auth.models import User  # Handles site users
-from django.db import models  # Handles model classes
+from django.contrib.auth.models import User  	# Handles site users
+from django.db import models  					# Handles model classes
+from markdownx.models import MarkdownxField  	# Adds a Markdown editor field
 
 
 class Link(models.Model):
@@ -19,9 +20,9 @@ class Article(models.Model):
 	in main site.
 	"""
 	title = models.CharField('Title', max_length=255, unique=True)    		# Article title
-	description = models.TextField('Description', null=True, blank=True)  	# Article summary/description
+	description = MarkdownxField('Description', null=True, blank=True)  	# Article summary/description
 	author = models.ForeignKey(User, on_delete=models.CASCADE)  			# Author user
-	content = models.TextField('Content')  									# Content for article
+	content = MarkdownxField('Content')  									# Content for article
 	created = models.DateTimeField(auto_now_add=True)  						# Creation datetime for article
 	modified = models.DateTimeField(auto_now=True)  						# Last modified datetime for article
 

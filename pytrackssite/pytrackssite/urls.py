@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('core.urls')),                 # Includes the Core app urls.
     path('articles/', include('articles.urls')),    # Includes the Articles app urls.
     path('tracks/', include('tracks.urls')),        # Includes the Tracks app urls.
+    path('markdownx/', include('markdownx.urls')),  # Includes the markdownx module urls.
 ]

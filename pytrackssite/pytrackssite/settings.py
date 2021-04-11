@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',         # The core site - the meta of the Python Tracks site
     'articles',     # The articles app - handles article posts
     'tracks',       # The tracks app - handles Python tracks
+    'markdownx',    # Installed module provides markdown editor for TextFields
 ]
 
 MIDDLEWARE = [
