@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',  # The core site - the meta of the Python Tracks site
-    'articles', # The articles app - handles article posts
-    'tracks', # The tracks app - handles Python tracks
+    'core',         # The core site - the meta of the Python Tracks site
+    'articles',     # The articles app - handles article posts
+    'tracks',       # The tracks app - handles Python tracks
 ]
 
 MIDDLEWARE = [
